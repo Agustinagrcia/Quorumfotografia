@@ -1,0 +1,227 @@
+/* Reset y base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: white;
+    color: #111;
+}
+
+main {
+    margin-left: 200px;
+    padding: 30px;
+}
+
+/* Sidebar fija */
+.sidebar {
+    width: 180px;
+    background-color: #000;
+    color: white;
+    position: fixed;
+    left: 0;
+    height: 100vh;
+    /* altura total de pantalla */
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    height: 100vh;
+    align-items: center;
+}
+
+.sidebar nav {
+    width: 100%;
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* centrar verticalmente todo su contenido */
+    align-items: center;
+}
+
+#logotipo img {
+    margin-top: 20px;
+    width: 60px;
+}
+
+/* links siguen igual */
+.sidebar nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    display: block;
+    padding: 10px 10px;
+    width: 100%;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    text-align: center;}
+
+.sidebar nav a:hover {
+    background-color: #1a1a1a;
+    color: #ddd;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 400
+}
+
+/* Contenido principal: margen para que no quede debajo del sidebar */
+.galeria {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    flex: 1;
+}
+
+/* Fotos */
+.foto img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Contenedor iconos oculto por defecto */
+.foto .iconos {
+    margin-top: 6px;
+    display: flex;
+    justify-content: right;
+    gap: 15px;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+/* Al hacer hover sobre toda la sección .foto, mostramos los iconos */
+.foto:hover .iconos {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Tamaño y estilo de los iconos */
+.foto .iconos svg {
+    width: 40px;
+    height: 25px;
+    cursor: pointer;
+    transition: fill 0.3s ease;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    /* ya no forzamos altura fija */
+    margin-left: 180px;
+    background-color: black;
+    color: white;
+    padding: 2rem;
+}
+
+#containerfooter {
+    background-color: aqua;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2rem;
+    justify-content: space-around;
+    gap: 2rem;
+    box-sizing: border-box;
+}
+
+/* Contenido izquierdo */
+#contenidof {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 45%;
+}
+
+footer h2 {
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    margin-bottom: 1rem;
+}
+
+footer p {
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Formulario */
+#contenidomail {
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+input {
+    background-color: transparent;
+    border: 1px solid #a4b5c4;
+    padding: 3%;
+    margin-top: 2%;
+    color: white;
+}
+
+input:hover,
+input:active {
+    background-color: white;
+    color: black;
+}
+
+input::placeholder {
+    color: #a4b5c4;
+    font-size: medium;
+}
+
+#mensajito {
+    padding-bottom: 20%;
+}
+
+#button1 {
+    font-size: larger;
+    text-align: center;
+    margin-top: 40px;
+    /* reducido */
+    width: 50%;
+    color: black;
+    background-color: #cdd5db;
+    align-self: center;
+}
+
+#button1:hover {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+/* Footer navigation */
+#navfooter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+}
